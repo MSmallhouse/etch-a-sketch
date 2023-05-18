@@ -30,7 +30,22 @@ function initGrid(rows, columns) {
     }
 }
 
+function destroyGrid() {
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+}
+
 const gridContainer = document.querySelector('.grid-container');
+const resizeButton = document.querySelector('.btn');
 
 setWindowSize();
 initGrid(ROWS, COLUMNS);
+
+let numSquares;
+resizeButton.addEventListener('click', () => {
+    numSquares = prompt('Enter the number of squares per side (no more than 100):');
+    numSquares = Math.min(100, numSquares);
+    destroyGrid();
+    initGrid(numSquares, numSquares);
+});
