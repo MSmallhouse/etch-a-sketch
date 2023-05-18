@@ -1,14 +1,21 @@
-:root {
-  --sixteenth-width: (1/16)*100;
+body{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
 }
-body {
-  margin: 0;
+
+.btn {
+  margin-bottom: 20px;
 }
+
+.grid-container {
+  border: 4px solid black;
+}
+
 .row {
   display: flex;
 }
 
-.col {
-  height: 6.25vh; /* 6.25 is (1/16)*100 since the grid is 16x16*/
-  width: 6.25vw;
+.grid-square {
+  flex-grow: 1;
 }
