@@ -1,6 +1,9 @@
 :root {
   --sixteenth-width: (1/16)*100;
 }
+body {
+  margin: 0;
+}
 .row {
   display: flex;
 }
